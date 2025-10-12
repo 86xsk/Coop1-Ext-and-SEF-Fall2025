@@ -1,4 +1,4 @@
-package com.example.cooplearningproj.Navigation
+package com.example.cooplearningproj.navigation
 
 import androidx.compose.material3.NavigationBar
 import androidx.compose.runtime.Composable
