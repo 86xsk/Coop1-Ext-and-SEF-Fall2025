@@ -1,17 +1,22 @@
 package com.example.cooplearningproj.navigation
 
+import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.wear.compose.navigation.currentBackStackEntryAsState
 import com.example.cooplearningproj.destination.Destination
+import com.example.cooplearningproj.screens.EditScreen
+import com.example.cooplearningproj.screens.PracticeScreen
+import com.example.cooplearningproj.screens.StatsScreen
 
 data class NavItem(val destination: Destination, val iconPainter: Painter?)
-private val NAV_ITEMS: List<NavItem> = listOf(
+val NAV_ITEMS: List<NavItem> = listOf(
     NavItem(Destination.Stats, null),
     NavItem(Destination.Edit, null),
     NavItem(Destination.Practice, null)
