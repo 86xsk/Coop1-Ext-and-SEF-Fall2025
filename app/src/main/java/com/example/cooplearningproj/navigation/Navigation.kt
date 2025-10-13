@@ -11,6 +11,7 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.wear.compose.navigation.currentBackStackEntryAsState
 import com.example.cooplearningproj.destination.Destination
+import com.example.cooplearningproj.extensions.string.upperFirstChar
 import com.example.cooplearningproj.screens.EditScreen
 import com.example.cooplearningproj.screens.PracticeScreen
 import com.example.cooplearningproj.screens.StatsScreen
@@ -39,7 +40,7 @@ fun BottomNav(navController: NavController) {
                     }},
                 // Use icon if it was specified for the `navItem`.
                 icon = {if (navItem.iconPainter != null) { Icon(painter = navItem.iconPainter, contentDescription = null)}},
-                label = { Text(text= navItem.destination.route) }
+                label = { Text(text = navItem.destination.route.upperFirstChar()) }
             )
         }
     }
